@@ -1,8 +1,8 @@
 # scorepipe
 
-Depenedencies/n
+Depenedencies
 
-Create virtual environment/n
-python -m venv scorepipe/n
+Create virtual environment
 
-1.) pip install -r requirements.txt
+python -m venv scorepipe
+pip install -r requirements.txt
