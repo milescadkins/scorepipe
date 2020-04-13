@@ -19,3 +19,7 @@ class ScorePipe:
         }
 
         return self
+
+    def print2(self):
+        print('Hello world')
+        return self
