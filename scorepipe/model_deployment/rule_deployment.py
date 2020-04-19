@@ -1,8 +1,12 @@
-from prediction_maestro.predictor.base_predictor import BasePredictor
 from scorepipe.model_deployment.base_deployment import BaseDeployment
 
 class RuleDeployment(BaseDeployment):
 
-    def __init__(self):
+    """
+    A deployment that enacts a user defined rule as a function.
+    """
 
-        self.name = 'rule'
+    def __init__(self,name,rule_func):
+        super().__init__(name) #Inherit from base_deployment.py
+
+        self.rule_function = rule_func #A function that will trigger something
