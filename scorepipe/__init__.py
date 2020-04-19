@@ -1,2 +1,1 @@
-#from scorepipe.pipe import ScorePipe
-import scorepipe.pipe
+from scorepipe.pipe import ScorePipe

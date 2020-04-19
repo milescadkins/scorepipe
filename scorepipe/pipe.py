@@ -2,24 +2,20 @@ class ScorePipe:
     """
     The ScorePipe pipeline
 
-    Determine the scoring path for a new scoring record or batch scoring records
+    Determine the scoring path for a new scoring record or for batch scoring records
 
     """
 
     def __init__(self):
 
-        self.models = {}
+        self.model_deployments = {}
 
-    def add_model(self, model_object):
+    def add_model(self, model_deployment_object):
         """
         """
 
-        self.models[model_object.name] = {
-            'object': model_object
+        self.model_deployments[model_deployment_object.name] = {
+            'model_deployment_object': model_deployment_object
         }
 
-        return self
-
-    def print2(self):
-        print('Hello world')
         return self
