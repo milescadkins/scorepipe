@@ -3,3 +3,4 @@ lib/
 pyvenv.cfg
 push_to_github.sh
 .ipynb_checkpoints
+.DS_Store
