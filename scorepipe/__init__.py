@@ -1,2 +1,3 @@
 from scorepipe.pipe import ScorePipe
 from scorepipe.deployment_status import DeploymentStatus
+from scorepipe.prediction_result import PredictionResult
