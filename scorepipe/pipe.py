@@ -20,6 +20,18 @@ class ScorePipe:
 
         return self
 
+
+
+
+
+
+
+
+
+        """
+            Code to implement
+        """
+
     def init(self):
         """
         Initialize the maestro harness.
