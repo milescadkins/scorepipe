@@ -2,7 +2,7 @@ class ScorePipe:
     """
     The ScorePipe pipeline
 
-    Determine the scoring path for a new scoring record or for batch scoring records
+    Determine the scoring path for a new scoring record or for batch scoring records.
 
     """
 
