@@ -1,22 +1,27 @@
-from scorepipe.model_deployment.base_deployment import BaseDeployment
-from scorepipe.deployment_status import DeploymentStatus
+from scorepipe.model.base_model import BaseModel
+from scorepipe.model_status import ModelStatus
 from scorepipe.prediction_result import PredictionResult
-class RuleDeployment(BaseDeployment):
+
+class Rule(BaseModel):
 
     """
     A deployment that enacts a user defined rule as a function.
     """
 
-    def __init__(self,name,rule_func):
+    def __init__(self,name,func):
         super().__init__(name) #Inherit from base_deployment.py
 
-        self.rule_function = rule_func #A function that will trigger something
+        self.rule_func = func #A function that will trigger something
 
-    def predict(self, input_dataframe):
+    def predict(self, X):
+
         prediction_result = PredictionResult()
+
+        #Try making a prediction
         try:
-            predictions = self.rule_function(input_dataframe)
-            status = PredictionStatus.OK
+            status = ModelStatus.IN_PROGRESS
+            predictions = self.rule_func(X)
+            status = ModelStatus.OK
             prediction_result.prediction_values = predictions
         except Exception as e:
             status = DeploymentStatus.FAIL

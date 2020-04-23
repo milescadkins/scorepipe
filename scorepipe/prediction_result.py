@@ -1,4 +1,4 @@
-from scorepipe.deployment_status import DeploymentStatus
+from scorepipe.model_status import ModelStatus
 
 class PredictionResult:
     """
