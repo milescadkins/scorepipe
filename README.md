@@ -8,7 +8,7 @@ git clone https://github.com/milescadkins/scorepipe.git
 
 # .2) Create virtual environment and install dependencies
 
-python -m venv scorepipe
+python3 -m venv scorepipe
 
 cd scorepipe
 
